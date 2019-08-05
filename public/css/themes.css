@@ -10,10 +10,12 @@
     transition: transform 1000ms ease-in-out;
     background: white;
     z-index: 5;
+    opacity: 0;
 }
 
 .themes-transform {
     transform: translateX(0);
+    opacity: 1;
 }
 
 .theme-option-container {
