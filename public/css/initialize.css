@@ -5,6 +5,10 @@ form::-webkit-scrollbar {
     background: transparent; /* make scrollbar transparent */
 }
 
+form {
+    padding-bottom: 5rem;
+}
+
 .initialize-container {
     display: flex;
     flex-direction: column;
