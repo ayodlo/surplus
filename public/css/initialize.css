@@ -1,3 +1,10 @@
+body::-webkit-scrollbar,
+.contact::-webkit-scrollbar,
+form::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 .initialize-container {
     display: flex;
     flex-direction: column;

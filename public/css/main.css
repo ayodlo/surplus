@@ -1,3 +1,10 @@
+body::-webkit-scrollbar,
+.contact::-webkit-scrollbar,
+form::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 body, html {
     box-sizing: border-box;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;

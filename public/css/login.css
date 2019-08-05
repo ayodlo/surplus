@@ -1,3 +1,10 @@
+body::-webkit-scrollbar,
+.contact::-webkit-scrollbar,
+form::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
 .login {
     background: whitesmoke;
     width: 100%;
@@ -14,6 +21,7 @@
     min-height: 50rem;
     padding: 2rem 0;
     backface-visibility: hidden;
+    min-height: 100vh;
 }
 
 .login-header {
