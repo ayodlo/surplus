@@ -1,0 +1,78 @@
+.themes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 1000ms ease-in-out;
+    background: white;
+    z-index: 5;
+}
+
+.themes-transform {
+    transform: translateX(0);
+}
+
+.theme-option-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 25%;
+    width: 100%;
+    transition: all 1000ms ease-in-out;
+}
+
+.theme-option-container:hover {
+    cursor: pointer;
+}
+
+.misty-rose {
+  background: rgba(175, 47, 47, 0.15);
+}
+
+.misty-rose:hover {
+  background: rgba(175, 47, 47, 0.35);
+}
+
+.pastel-green {
+    background: rgba(184, 216, 190, .6);
+}
+
+.pastel-green:hover {
+    background: rgba(184, 216, 190, 1);
+}
+
+.verdigris {
+    background: rgba(64, 181, 188, .6);
+}
+
+.verdigris:hover {
+    background: rgba(64, 181, 188, 1);
+}
+
+.black {
+    color: white;
+    background: rgba(0, 0, 0, .6);
+}
+
+.black:hover {
+    color: white;
+    background: rgba(0, 0, 0, 1);
+}
+
+h1 {
+    color: rgb(53, 53, 53);
+}
+
+.black h1 {
+    color: white;
+}
+
+.theme-input-container {
+    display: none;
+}

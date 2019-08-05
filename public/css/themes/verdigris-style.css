@@ -1,0 +1,119 @@
+.main {
+  background: whitesmoke;
+}
+
+.main-transform {
+  background: rgba(64, 181, 188, .6);
+}
+
+.info-container {
+  background: rgba(64, 181, 188, .6);
+}
+
+.surplus {
+  color: whitesmoke;
+}
+
+.surplus-cost {
+  color: rgb(116, 116, 116);
+}
+
+.main-title {
+  color: rgba(64, 181, 188, .6);
+}
+
+.input-container {
+  background: whitesmoke;
+}
+
+.cost-input {
+  caret-color: darkgray;
+  color: rgb(116, 116, 116);
+  background: whitesmoke;
+}
+
+.cost-input::placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.add-button-container button {
+  background: rgba(64, 181, 188, 1);
+  color: white;
+}
+
+.add-button-container button:hover {
+  background: rgba(64, 181, 188, .6);
+  color: white;
+}
+
+.menu-button-container .fa-chevron-circle-up {
+  color: rgba(64, 181, 188, .6);
+}
+
+.menu-button-container .fa-chevron-circle-up:hover,
+.menu-button-container .fa-chevron-circle-up:active,
+.menu-button-container .fa-chevron-circle-up:focus {
+  color: rgba(64, 181, 188, 1);
+}
+
+.menu-button-container .fa-chevron-circle-down {
+  color: rgba(245, 245, 245);
+}
+
+.menu-button-container .fa-chevron-circle-down:hover,
+.menu-button-container .fa-chevron-circle-down:focus,
+.menu-button-container .fa-chevron-circle-down:active {
+  color: rgba(64, 181, 188, 1);
+}
+
+.menu {
+  background: whitesmoke;
+}
+
+.menu-transform {
+  background: rgba(64, 181, 188, .6);
+}
+
+.menu-option-button button {
+  background: whitesmoke;
+  color: darkgray;
+}
+
+.menu-option-button button:hover,
+.menu-option-button button:focus,
+.menu-option-button button:active {
+  background: rgba(64, 181, 188, 1);
+  color: whitesmoke;
+}
+
+/* COSTS & OTHER COSTS */
+.costs-page,
+.otherCostsPage {
+    background: white;
+}
+
+.back-container {
+  background: rgb(82, 214, 221);
+  color: whitesmoke;
+}
+
+.table-container {
+  background: rgb(73, 205, 212);
+  color: darkgray;
+}
+
+.back-container:hover {
+  background: whitesmoke;
+  color: darkgray;
+}
+
+/* TABLE BACKGROUND COLORS */
+.table-container tr:nth-child(odd) {
+  background: rgb(82, 214, 221);
+  color: whitesmoke;
+}
+
+.table-container tr:nth-child(even) {
+  background: whitesmoke;
+  color: darkgray;
+}

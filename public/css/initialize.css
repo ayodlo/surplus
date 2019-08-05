@@ -1,0 +1,259 @@
+.initialize-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    color: black;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 15;
+    transition: transform 750ms ease-in-out;
+    min-width: 15.5rem;
+}
+
+.initialize-container::-webkit-scrollbar {
+	width: 0px;
+	background: transparent; /* make scrollbar transparent */
+}
+
+.initialize-container h1 {
+    width: 70%;
+    margin: 1rem 0 .7rem 0;
+    color: black;
+    background: white;
+    font-size: 2.2rem;
+    min-width: 15.5rem;
+}
+
+.initialize-container p {
+    width: 70%;
+    font-size: .9rem;
+}
+
+.monthly-text {
+    width: 100%;
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+.initialize-container label {
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 530;
+}
+
+.next-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.initialize-container__form-group {
+    position: absolute;
+    background: whitesmoke;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 70%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: -1;
+    -webkit-box-shadow: 6px 6px 20px -9px rgba(0,0,0,0.96);
+    -moz-box-shadow: 6px 6px 20px -9px rgba(0,0,0,0.96);
+    box-shadow: 6px 6px 20px -9px rgba(0,0,0,0.96);
+    transition: transform 750ms ease-in-out;
+}
+
+.start {
+    transform: translateX(150%);
+}
+
+.move {
+    transform: translateX(-150%);
+}
+
+.initialize-container__form-group .custom-select {
+    width: 80%;
+    margin: .5rem 0;
+}
+
+.initialize-container__input {
+    padding: 1rem;
+    margin: .5rem 0;
+    width: 80%;
+    border: none;
+    background: white;
+    caret-color: darkgray;
+    color: rgb(41, 41, 41);
+    font-size: 1rem;
+}
+
+.initialize-container__input::placeholder {
+    color: rgb(155, 155, 155);
+    font-size: 1rem;
+}
+
+.init1, .init2, .init3 {
+background: rgb(37, 207, 37);
+border: none;
+width: 80%;
+margin: .7rem 0 1rem 0;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: .8rem;
+padding: .6rem 0;
+border-radius: 10px;
+transition: all 500ms ease-in-out;
+position: relative;
+letter-spacing: 2px;
+font-size: .9rem;
+font-weight: 600;
+}
+
+.init1:hover, 
+.init2:hover, 
+.init3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.init1:active, 
+.init2:active, 
+.init3:active  {
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.init1::after,
+.init2::after,
+.init3::after {
+    content:"";
+    display: inline-block;
+    height: 100%; /*This works because this element acts as a child to the parent element or element that this comes after*/
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(37, 207, 37);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: .8rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    border-radius: 10px;
+  }
+
+  .init1:hover::after,
+  .init2:hover::after,
+  .init3:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    transition: all .4s ease-out;
+  }
+
+.back1, 
+.back2 {
+background: red;
+border: none;
+width: 80%;
+margin: .7rem 0 1rem 0;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: .8rem;
+padding: .6rem 0;
+border-radius: 10px;
+transition: all 500ms ease-in-out;
+position: relative;
+letter-spacing: 2px;
+font-size: .9rem;
+font-weight: 600;
+}
+
+.back1::after,
+.back2::after {
+    content:"";
+    display: inline-block;
+    height: 100%; /*This works because this element acts as a child to the parent element or element that this comes after*/
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: red;
+    color: whitesmoke;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    border-radius: 10px;
+  }
+
+.back1:hover, 
+.back2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.back1:active, 
+.back2:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+  .back1:hover::after,
+  .back2:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    transition: all .4s ease-out;
+  }
+
+.first-pay-day {
+    margin: .7rem;
+}
+
+.initialize-container button:focus,
+.initialize-container button:active,
+.initialize-container button:hover {
+cursor: pointer;
+background-color: white;
+}
+
+.initialize-container button a,
+.initialize-container button a:link,
+.initialize-container button a:hover,
+.initialize-container button a:visited,
+.initialize-container button a:active {
+position: relative;
+text-decoration: none;
+color: white;
+}
+
+.initialize-container__not-registered {
+    color: rgb(36, 36, 36);
+}
+
+.create-account,
+.create-account:active,
+.create-account:visited,
+.create-account:link {
+    color: rgba(163, 42, 42, 0.774);
+    text-decoration: none;
+}

@@ -1,0 +1,14 @@
+<form action="/users/register" method="post">
+  <div class="register">
+    <h1>Register</h1>
+    <div class="form-group">
+      <input type="text" placeholder="User Name" id="name" name="name" value="{{name}}" min="4" required>
+      <input type="email" placeholder="Email Address" id="email" name="email" value="{{email}}" min="5" required>
+      <input type="password" placeholder="Password" id="password" name="password"value="{{password}}" min="4" required>
+      <input type="password" placeholder="Verify Password" id="password2" name="password2"value="{{password2}}" min="4" required>
+    </div>
+    <button class="submit" type="submit">
+      Submit
+    </button>
+  </div>
+</form>

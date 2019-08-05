@@ -1,0 +1,66 @@
+<form action="/initialize" method="post">
+    <div class="initialize-container">
+        <h1>Welcome to Surplus!</h1>
+        <p>Surplus uses a simple formula that estimates how much surplus money you will have at the end of each
+            month <i>after</i> you pay your bills. We just
+            need you to answer some questions to get started!</p>
+        <div class="next-container">
+            <div class="initialize-container__form-group first">
+                <label>Select how often your paid:</p>
+                    <select class="custom-select" method="post" name="payFrequency">
+                        <option selected value="weekly">Weekly</option>
+                        <option value="biweekly">Bi-Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                    <label for="payRate">How much are you paid at the interval selected above? (e.g. if you selected
+                        weekly
+                        above, your saying you get paid
+                        this much every week)</label>
+                    <input class="initialize-container__input" action="/initialize" method="post" name="payRate"
+                        type="number" min="0" step=".01" required placeholder="Pay rate...">
+                    <label for="start">First pay day this month:</label>
+                    <input class="first-pay-day" action="/initialize" method="post" type="date" id="start"
+                        name="firstPayDay" required>
+                    <button class="initialize-container__submit init1" type="button">
+                        Next
+                    </button>
+            </div>
+            <div class="initialize-container__form-group second start">
+                <button class="initialize-container__submit-back back1" type="button">
+                    Back
+                </button>
+                <div class="monthly-text">Input the following <i>monthly</i> costs. If they don't apply, leave blank.
+                </div>
+                <label for="rent">Rent and utilities</label>
+                <input class="initialize-container__input" action="/initialize" method="post" name="rent" type="number"
+                    value="0" min="0" step=".01" required>
+                <label for="car">Car payment and car insurance</label>
+                <input class="initialize-container__input" action="/initialize" method="post" name="car" type="number"
+                    value="0" min="0" step=".01" required>
+                <label for="phone">Phone bill</label>
+                <input class="initialize-container__input" action="/initialize" method="post" name="phone" type="number"
+                    value="0" min="0" step=".01" required>
+                <label for="allother">Cable and internet package</label>
+                <input class="initialize-container__input" action="/initialize" method="post" name="internet"
+                    type="number" value="0" min="0" step=".01" required>
+                <label for="allother">Add up all other re-ocurring expenses (e.g. Hulu, Netflix, Godaddy...etc)</label>
+                <input class="initialize-container__input" action="/initialize" method="post" name="allother"
+                    type="number" value="0" min="0" step=".01" required>
+                <button class="initialize-container__submit init2" type="button">
+                    Next
+                </button>
+            </div>
+            <div class="initialize-container__form-group third start">
+                <button class="initialize-container__submit-back back2" type="button">
+                    Back
+                </button>
+                <label for="nonReocurring">How much have you spent on non re-ocurring expenses this month? (e.g. drinks, oil change, new tv, etc...)</label>
+                <input class="initialize-container__input" action="/initialize" method="post" name="nonReocurring"
+                    type="number" value="0" min="0" step=".01" required>
+                <button class="initialize-container__submit init3" type="submit">
+                    Finish
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

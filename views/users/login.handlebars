@@ -1,0 +1,19 @@
+<form action="/users/login" method="post">
+  <div class="login">
+    <h1 class="login-header">
+      <span class="login-header--brand"><i class="fas fa-money-bill-wave"></i></span>
+      <span class="login-header--text">Login</span>
+    </h1>
+    <div class="form-group">
+      <input type="text" placeholder="User Name" id="name" name="name" min="4" required>
+      <input type="password" placeholder="Password" id="password" name="password" min="4" required>
+    </div>
+    <div class="login__button-group">
+      <button class="submit" type="submit">
+        Login
+      </button>
+      <p class="not-registered">Not Registered?</p>
+      <a href="/users/register" class="create-account">Create Account</a>
+    </div>
+  </div>
+</form>

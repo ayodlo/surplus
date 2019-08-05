@@ -1,0 +1,48 @@
+<div class="main">
+  <div class="info-container">
+    <p class="surplus">
+      <span class="surplus-cost">${{surplus}}</span> surplus for {{month}}/19</p>
+  </div>
+  <h1 class="main-title">Surplus</h1>
+  <div class="input-container">
+    <form class="cost-form" action="/" method="post">
+      <div class="cost-input-container">
+        <input class="cost-input" name="costOtherName" type="text" min="4" required placeholder="What you paid for">
+      </div>
+      <div class="cost-input-container">
+        <input class="cost-input" name="costOther" type="number" min=".01" step=".01" required placeholder="How much you paid">
+      </div>
+      <div class="add-button-container">
+        <button class="add-button" type="submit">add cost</button>
+      </div>
+    </form>
+  </div>
+  <div class="menu-button-container">
+    <i class="fa fa-chevron-circle-up menu-button-up"></i>
+  </div>
+</div>
+<div class="menu">
+  <div class="menu-button-container">
+    <i class="fa fa-chevron-circle-down menu-button-down"></i>
+  </div>
+  <div class="menu-option-button">
+    <button class="costs-button">edit monthly costs</button>
+  </div>
+  <div class="menu-option-button">
+    <button class="otherCostsButton">edit other costs</button>
+  </div>
+  <div class="menu-option-button">
+    <button class="themes-button">change theme</button>
+  </div>
+  <div class="menu-option-button">
+    <button class="initialize-button">calculate new income</button>
+  </div>
+  <form action="/users/logout">
+    <div class="menu-option-button">
+      <button class="logout-button">log out</button>
+    </div>
+  </form>
+</div>
+<form method="post" action="/initialize/restart" class="theme-input-container" id="initializeForm">
+  <input type="submit" value="Submit">
+</form>
