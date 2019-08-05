@@ -1,3 +1,7 @@
+form {
+    padding-bottom: 5rem;
+}
+
 .register {
     position: fixed;
     top: 0;
@@ -13,7 +17,6 @@
     justify-content: flex-start;
     align-items: center;
     transition: transform 750ms ease-in-out;
-    padding-bottom: 5rem;
 }
 
 .register h1 {
