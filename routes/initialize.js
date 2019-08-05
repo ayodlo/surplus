@@ -30,6 +30,7 @@ router.post('/', (req, res) => {
     const restOfMonths = daysInMonths.slice(month);
     let firstPaydayThisMonth = (date[2] * 1);
     let firstPaydayNextMonth;
+    const payFrequency = req.body.payFrequency;
 
     monthlyCosts = {
         rent: req.body.rent,
@@ -46,9 +47,19 @@ router.post('/', (req, res) => {
     // paidEachMonth is an array that holds how many times user will be paid each month
     numTimesPaidEachMonth = restOfMonths.map((monthDays) => {
         const daysLeftInMonth = monthDays - firstPaydayThisMonth + 1;
-        firstPaydayNextMonth = 8 - (daysLeftInMonth % 7);
-        firstPaydayThisMonth = firstPaydayNextMonth;
-        return Math.floor(daysLeftInMonth / 7) + 1;
+        if (payFrequency === "weekly") {
+            firstPaydayNextMonth = 8 - (daysLeftInMonth % 7);
+            firstPaydayThisMonth = firstPaydayNextMonth;
+            return Math.floor(daysLeftInMonth / 7) + 1;
+        }
+        else if (payFrequency === "biweekly") {
+            firstPaydayNextMonth = 8 - (daysLeftInMonth % 7);
+            firstPaydayThisMonth = firstPaydayNextMonth;
+            return Math.floor(daysLeftInMonth / 14) + 1;
+        }
+        else if (payFrequency === "monthly") {
+            return 1;
+        }
     });
 
     paidPerMonth = numTimesPaidEachMonth.map((timesPaidPerMonth) => {
