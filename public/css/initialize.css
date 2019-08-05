@@ -267,8 +267,11 @@ color: white;
 }
 
 .first,
-.second,
 .third,
 .initialize-container {
     padding-bottom: 5rem;
+}
+
+.second {
+    padding-bottom: 8rem;
 }
