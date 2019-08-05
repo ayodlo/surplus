@@ -5,12 +5,6 @@ form::-webkit-scrollbar {
     background: transparent; /* make scrollbar transparent */
 }
 
-.first,
-.second,
-.third {
-    padding-bottom: 4rem;
-}
-
 .initialize-container {
     display: flex;
     flex-direction: column;
@@ -270,4 +264,10 @@ color: white;
 .create-account:link {
     color: rgba(163, 42, 42, 0.774);
     text-decoration: none;
+}
+
+.first,
+.second,
+.third {
+    padding-bottom: 4rem;
 }
