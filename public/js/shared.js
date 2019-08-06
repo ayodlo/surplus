@@ -159,6 +159,12 @@ if (init1stButton && init2ndButton && back1 && back2) {
 
 // DATE PICKER
 if (dateElement) {
+
+    //reset type=date inputs to text
+    $( document ).bind( "mobileinit", function(){
+        $.mobile.page.prototype.options.degradeInputs.date = true;
+      });
+
         jQuery(function ($) { //on document.ready
             $('#start').datepicker({
                 inline: true,
