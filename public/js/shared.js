@@ -33,6 +33,7 @@ const init2nd = document.querySelector('.second');
 const init3rd = document.querySelector('.third');
 const back1 = document.querySelector('.back1');
 const back2 = document.querySelector('.back2');
+const dateElement = document.querySelector('.first-pay-day');
 
 
 //ONLOAD FUNCTION
@@ -110,7 +111,7 @@ if (themesButton && themeOptionContainer && mistyRose && pastelGreen && verdigir
         })
     })
     */
-   
+
     mistyRose.addEventListener('click', function () {
         document.getElementById('theme-input').value = "/css/themes/pink-style.css";
         document.getElementById('themeForm').submit();
@@ -155,3 +156,14 @@ if (init1stButton && init2ndButton && back1 && back2) {
         init3rd.classList.add('start');
     })
 }
+
+// DATE PICKER
+if (dateElement) {
+        jQuery(function ($) { //on document.ready
+            $('#start').datepicker({
+                inline: true,
+                showOtherMonths: true,
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            });
+        })
+    }

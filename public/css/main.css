@@ -5,6 +5,12 @@ form::-webkit-scrollbar {
     background: transparent; /* make scrollbar transparent */
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 body, html {
     box-sizing: border-box;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -17,7 +23,6 @@ body, html {
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     overflow: hidden;
     min-height: 500px;
-    padding-bottom: 20rem;
   }
   
   body::-webkit-scrollbar,
@@ -135,6 +140,8 @@ body, html {
     position: absolute;
     bottom: 1rem;
     transition: all 500ms ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .menu-button-container .fa-chevron-circle-up:hover,
@@ -148,6 +155,8 @@ body, html {
     position: absolute;
     top: 1rem;
     transition: all 500ms ease-in-out;
+    left: 50%;
+transform: translateX(-50%);
   }
   
   .menu-button-container .fa-chevron-circle-down:hover,
@@ -243,10 +252,16 @@ body, html {
     .menu-option-button {
       justify-content: flex-start;
     }
-  
+
+    .menu-button-container {
+      width: 100%;
+    }
+
     .menu-button-container .menu-button-up,
     .menu-button-container .menu-button-down {
       position: relative;
+      left: 0%;
+      transform: translateX(0%);
     }
   
     .menu-button-up {

@@ -84,14 +84,16 @@ form::-webkit-scrollbar {
     -moz-box-shadow: 6px 6px 20px -9px rgba(0,0,0,0.96);
     box-shadow: 6px 6px 20px -9px rgba(0,0,0,0.96);
     transition: transform 750ms ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .start {
-    transform: translateX(150%);
+    transform: translateX(350%);
 }
 
 .move {
-    transform: translateX(-150%);
+    transform: translateX(-350%);
 }
 
 .initialize-container__form-group .custom-select {

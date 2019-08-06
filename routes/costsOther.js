@@ -23,7 +23,9 @@ router.post('/', (req, res) => {
             costOther: req.body.costOther
         });
     } else {
+        console.log(req.body.costOther);
         const newCostOther = {
+
             price: req.body.costOther,
             user: req.user.id
         }
