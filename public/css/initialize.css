@@ -1,11 +1,17 @@
+/* MAKE SCROLLBARS TRANSPARENT*/
 body::-webkit-scrollbar,
 .contact::-webkit-scrollbar,
 form::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent;
 }
-
+/*SUPPOSEDLY HELPS PADDING ON iOS*/
 ::-webkit-datetime-edit { padding: 1rem 0; }
+
+/* CHANGE COLOR OF DATE PICKER */
+.ui-datepicker .ui-widget-content {
+    background: rgb(37, 207, 37) none;
+  }
 
 .initialize-container {
     display: flex;

@@ -1,10 +1,12 @@
+/* MAKE SCROLLBAR INVISIBLE*/
 body::-webkit-scrollbar,
 .contact::-webkit-scrollbar,
 form::-webkit-scrollbar {
     width: 0px;
-    background: transparent; /* make scrollbar transparent */
+    background: transparent;
 }
 
+/* REMOVE SPINNERS FROM INPUTS */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
