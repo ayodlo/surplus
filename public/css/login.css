@@ -22,6 +22,7 @@ form::-webkit-scrollbar {
     padding: 2rem 0;
     backface-visibility: hidden;
     min-height: 100vh;
+    padding-bottom: 5rem;
 }
 
 .login-header {

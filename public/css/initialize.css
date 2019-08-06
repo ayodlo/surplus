@@ -5,6 +5,8 @@ form::-webkit-scrollbar {
     background: transparent; /* make scrollbar transparent */
 }
 
+::-webkit-datetime-edit { padding: 2rem; }
+
 .initialize-container {
     display: flex;
     flex-direction: column;
@@ -106,6 +108,7 @@ form::-webkit-scrollbar {
     caret-color: darkgray;
     color: rgb(41, 41, 41);
     font-size: 1rem;
+    z-index: 10;
 }
 
 .initialize-container__input::placeholder {
@@ -270,8 +273,10 @@ color: white;
 .third,
 .initialize-container {
     padding-bottom: 5rem;
+    z-index: 5;
 }
 
 .second {
     padding-bottom: 8rem;
 }
+

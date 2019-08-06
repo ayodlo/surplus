@@ -117,3 +117,5 @@
   background: whitesmoke;
   color: darkgray;
 }
+
+-webkit-user-select: none;
