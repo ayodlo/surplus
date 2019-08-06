@@ -5,7 +5,7 @@ form::-webkit-scrollbar {
     background: transparent; /* make scrollbar transparent */
 }
 
-::-webkit-datetime-edit { padding: 2rem; }
+::-webkit-datetime-edit { padding: 1rem 0; }
 
 .initialize-container {
     display: flex;
@@ -72,9 +72,9 @@ form::-webkit-scrollbar {
     background: whitesmoke;
     border: 1px solid rgb(99, 99, 99);
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1rem 1rem 5rem 1rem;
     width: 70%;
-    margin: 1rem;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -277,6 +277,6 @@ color: white;
 }
 
 .second {
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
 }
 
