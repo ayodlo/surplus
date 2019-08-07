@@ -158,7 +158,7 @@ if (init1stButton && init2ndButton && back1 && back2) {
 }
 
 // DATE PICKER
-if (dateElement) {
+if (dateElement && !Modernizr.inputtypes.date) {
 
     //reset type=date inputs to text
     $( document ).bind( "mobileinit", function(){

@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
     let firstPaydayThisMonth;
     let month;
 
-    if (date[0].length() > 3) {
+    if ((date[0]).length > 3) {
         firstPaydayThisMonth = (date[2] * 1);
         month = (date[1] * 1) - 1;
     } else {
@@ -61,6 +61,7 @@ router.post('/', (req, res) => {
         internet: req.body.internet,
         other: req.body.allother
     };
+
     const yearlyCosts = new Array(restOfMonths.length);
     yearlyCosts.fill(monthlyCosts);
     const yearlyNonReocurringCosts = new Array(restOfMonths.length);
