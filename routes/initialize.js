@@ -38,11 +38,19 @@ router.post('/', (req, res) => {
         console.log(date);
     }
 
-    console.log(date);
+    let firstPaydayThisMonth;
+    let month;
 
-    const month = (date[0] * 1) - 1;
+    if (date[0].length() > 3) {
+        firstPaydayThisMonth = (date[2] * 1);
+        month = (date[1] * 1) - 1;
+    } else {
+        firstPaydayThisMonth = (date[1] * 1);
+        month = (date[0] * 1) - 1;
+    }
+
     const restOfMonths = daysInMonths.slice(month);
-    let firstPaydayThisMonth = (date[1] * 1);
+
     let firstPaydayNextMonth;
     const payFrequency = req.body.payFrequency;
 
