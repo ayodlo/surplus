@@ -36,8 +36,7 @@ const UserSchema = new Schema({
     default: false
   },
   date: {
-    type: Date,
-    default: Date.now
+    type: String
   },
   theme: {
     type: String,

@@ -29,8 +29,16 @@ router.post('/', (req, res) => {
     const daysInMonths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     //PARSE DATE
+    if(date.indexOf('/') != -1) {
         date = date.split("/");
         console.log(date);
+    }
+    if(date.indexOf('-') != -1) {
+        date = date.split("-");
+        console.log(date);
+    }
+
+    console.log(date);
 
     const month = (date[0] * 1) - 1;
     const restOfMonths = daysInMonths.slice(month);
@@ -73,8 +81,10 @@ router.post('/', (req, res) => {
         return (timesPaidPerMonth * (req.body.payRate * 1));
     })
 
+    date = date.toString();
+
     // Save how much user will be paid each month to the DB
-    Users.update({ _id: req.user.id }, { paidPerMonth: paidPerMonth, initialized: true, yearlyCosts: yearlyCosts, yearlyNonReocurringCosts: yearlyNonReocurringCosts })
+    Users.update({ _id: req.user.id }, { paidPerMonth: paidPerMonth, initialized: true, yearlyCosts: yearlyCosts, yearlyNonReocurringCosts: yearlyNonReocurringCosts, date: date })
         .then(updatedUser => {
             res.redirect('/');
         })
