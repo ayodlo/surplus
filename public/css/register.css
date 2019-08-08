@@ -3,7 +3,7 @@ form {
 }
 
 .register {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     background: whitesmoke;
@@ -24,6 +24,7 @@ form {
     color: black;
     background: whitesmoke;
     font-size: 3.3rem;
+    animation: 1.5s ease-out slideInRight;
 }
 
 .form-group {
@@ -32,14 +33,19 @@ form {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    animation: 1.5s ease-out 1s slideInLeft;
+    animation-fill-mode: backwards;
+    width: 90%;
+    max-width: 650px;
+    min-width: 200px;
 }
 
 .form-group input {
-    width: 75%;
+    width: 100%;
     padding: 1rem;
     margin: .5rem;
     border: none;
-    background: whitesmoke;
+    background: white;
     caret-color: darkgray;
     color: rgb(41, 41, 41);
     font-size: 1rem;
@@ -54,7 +60,8 @@ form {
 background: rgb(37, 207, 37);
 border: none;
 animation: color-change 3s infinite;
-width: 50%;
+width: 40%;
+min-width: 200px;
 padding: 1rem 0;
 margin: .7rem 0 1rem 0;
 text-align: center;
@@ -62,27 +69,73 @@ text-decoration: none;
 display: inline-block;
 font-size: .8rem;
 transition: all 500ms ease-in-out;
-}
-
-@keyframes color-change {
-  0% { color: black }
-  50% { color:rgb(102, 102, 102) }
-  100% { color: black }
-}
-
-.register button:focus,
-.register button:active,
-.register button:hover {
-cursor: pointer;
-background-color: white;
-}
-
-.register button a,
-.register button a:link,
-.register button a:hover,
-.register button a:visited,
-.register button a:active {
+animation: 1.5s ease-out 1s slideInBottom;
+animation-fill-mode: backwards;
 position: relative;
-text-decoration: none;
-color: white;
 }
+
+.register button:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.register button:active {
+    transform: translateY(3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+    .register button::after {
+        content:"";
+        display: inline-block;
+        height: 100%; /*This works because this element acts as a child to the parent element or element that this comes after*/
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: rgb(37, 207, 37);
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: .8rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+      }
+    
+      .register button:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+        transition: all .4s ease-out;
+      }
+
+      .not-registered {
+        color: rgb(36, 36, 36);
+        animation: 1.5s ease-out 1s slideInBottom;
+animation-fill-mode: backwards;
+    }
+    
+    .create-account,
+    .create-account:active,
+    .create-account:visited,
+    .create-account:link {
+        color: rgba(163, 42, 42, 0.774);
+        text-decoration: none;
+        animation: 1.5s ease-out 1s slideInBottom;
+animation-fill-mode: backwards;
+    }
+    
+@keyframes slideInRight {
+    0% { transform: translateX(-5rem); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slideInLeft {
+    0% { transform: translateX(5rem); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+  }
+
+  @keyframes slideInBottom {
+    0% { transform: translateY(5rem); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }

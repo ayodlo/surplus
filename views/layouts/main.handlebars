@@ -4,18 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
   <title>Surplus</title>
-  <meta name="author" content="name">
-  <meta name="description" content="description here">
-  <meta name="keywords" content="keywords,here">
   <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
   <link rel="stylesheet" href="/css/main.css" type="text/css">
   <link rel="stylesheet" href="/css/themes.css" type="text/css">
-  <link rel="stylesheet" href="/css/register.css" type="text/css">
-  <link rel="stylesheet" href="/css/login.css" type="text/css">
   <link rel="stylesheet" href="/css/monthly-costs.css" type="text/css">
-  <link rel="stylesheet" href="/css/initialize.css" type="text/css">
   <link id="pagestyle" rel="stylesheet" href={{theme}} type="text/css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous">
@@ -26,8 +19,8 @@
 
 <body>
   <div>
-    <!--{{> _msg}}-->
-    <!--{{> _errors}}-->
+    {{> _msg}}
+    {{> _errors}}
 
     <span class="costs-page">{{> _edit-monthly-cost}}</span>
     <span class="otherCostsPage">{{> _edit-other-cost}}</span>

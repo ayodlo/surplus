@@ -1,3 +1,7 @@
+<head>
+  <link rel="stylesheet" href="/css/initialize.css" type="text/css">
+</head>
+
 <form action="/initialize" method="post">
     <div class="initialize-container">
         <h1>Welcome to Surplus!</h1>
@@ -20,7 +24,7 @@
                         placeholder="Pay rate...">
                     <label for="start">First pay day this month:</label>
                     <input class="first-pay-day" action="/initialize" method="post" id="start"
-                        name="firstPayDay" type="date" required>
+                        name="firstPayDay" type="date">
                     <button class="initialize-container__submit init1" type="button">
                         Next
                     </button>

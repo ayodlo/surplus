@@ -9,8 +9,22 @@ form::-webkit-scrollbar {
 /* REMOVE SPINNERS FROM INPUTS */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+  -webkit-appearance: none !important; 
+  margin: 0 !important; 
+}
+
+/* REMOVE MARGINS ON ALERTS */
+.alert {
+  margin: 0 !important;
+  text-align: center;
+  z-index: 50;
+  display: block;
+}
+
+/* REMOVE OUTLINE FROM ALL BUTTONS */
+button:focus {outline:0;}
+button {
+  outline: none !important;
 }
 
 body, html {

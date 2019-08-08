@@ -7,10 +7,10 @@ const User = mongoose.model('users');
 
 module.exports = function(passport){
   //the usernameField: 'name' option is used to tell passport that the name of our username field is name - otherwise we would have to name it usernameField which is the passport default
-  passport.use(new LocalStrategy({usernameField: 'name'}, (name, password, done) => {
+  passport.use(new LocalStrategy({usernameField: 'email'}, (email, password, done) => {
     // Match user
     User.findOne({
-      name:name
+      email:email.toLowerCase()
     }).then(user => {
       if(!user){
         return done(null, false, {message: 'No User Found'});

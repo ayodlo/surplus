@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const router = express.Router();
-const {ensureAuthenticated} = require('../helpers/auth');
+const {alreadyLoggedIn} = require('../helpers/auth');
 
 // Load User Model
 require('../models/User');
 const User = mongoose.model('users');
 
 // User Login Route
-router.get('/login', (req, res) => {
+router.get('/login', alreadyLoggedIn, (req, res) => {
   res.render('users/login');
 });
 
@@ -24,7 +24,7 @@ router.post('/login', (req, res, next) => {
 });
 
 // User Register Route
-router.get('/register', (req, res) => {
+router.get('/register', alreadyLoggedIn, (req, res) => {
   res.render('users/register');
 });
 
@@ -51,15 +51,19 @@ router.post('/register', (req, res) => {
       password2: req.body.password2
     });
   } else {
-    User.findOne({email: req.body.email})
+    // Make password lowercase to avoid case sensitivity
+    const lowerCaseEmail = (req.body.email).toLowerCase();
+
+    //Make sure we are not registering the same email
+    User.findOne({email: lowerCaseEmail})
       .then(user => {
         if(user){
-          //req.flash('error_msg', 'Email already regsitered');
+          req.flash('error_msg', 'Email already regsitered');
           res.redirect('/users/register');
         } else {
           const newUser = new User({
             name: req.body.name,
-            email: req.body.email,
+            email: lowerCaseEmail,
             password: req.body.password
           });
           
